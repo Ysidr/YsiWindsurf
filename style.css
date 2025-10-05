@@ -3,20 +3,33 @@ body{
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-header{
-    margin: 0;
-    border: 0;
-    background-image: url('assets/img/7C67C403-A063-4F1F-99E2-A62448906EFC_1_105_c.jpeg');
+
+.background{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 480px;
+}
+header{
+    margin: 0;
+    border: 0;
+    background-image: url('assets/img/7C67C403-A063-4F1F-99E2-A62448906EFC_1_105_c.jpeg'); 
+    height: 100vh;
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    padding-top: 25%;
+    flex-direction: column;
+
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
+h2 {
+    font-size: 32px;
+    text-align: center;
 }
 
 .aboutMe{
