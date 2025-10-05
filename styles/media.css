@@ -1,0 +1,30 @@
+@media (max-width: 1000px) {
+
+    .AboutMeText {
+        flex: 1;
+        font-size: 18px;
+        line-height: 2;
+        height: 700px;
+        overflow-y: scroll;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .AboutMeImg img {
+        width: 100%;
+        /* Makes the image fill the width of the container */
+        height: 100%;
+        /* Makes the image fill the height of the container */
+        object-fit: cover;
+        /* Crops the image to fit the container */
+        aspect-ratio: 1/1;
+    }
+
+    .AboutMeText {
+        flex: 1;
+        font-size: 17px;
+        line-height: 1,6;
+    }
+}

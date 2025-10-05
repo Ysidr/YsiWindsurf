@@ -47,6 +47,7 @@ h2 {
 
 .AboutMeImg {
     flex: 1;
+    max-width: 720px !important;
     overflow: hidden; /* Ensures any overflowing part of the image is hidden */
     display: flex; /* Ensures the image can be aligned properly */
     align-items: center; /* Centers the image vertically */
@@ -64,4 +65,8 @@ h2 {
     height: 100%; /* Makes the image fill the height of the container */
     object-fit: cover; /* Crops the image to fit the container */
     aspect-ratio: 2/3;
+}
+
+.AboutMeImg button{
+    display: none;
 }
