@@ -7,53 +7,58 @@
     <title>YsiWindsurfing</title>
     <script src="./script.js"></script>
     <script src="./scripts/templates.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/media.css">
 </head>
 
-<body onload="createImgList()">
+<body onload="init()">
     <header class="background">
         <h1>Ysi Windsurf insturctor</h1>
         <h2>Your Windsurf instructor in Greece and Germany</h2>
     </header>
     <section class="aboutMe">
-        <div class="AboutMeText" ><h3 style="text-align: center;">About Me</h3>
-        <p>Hey, ich bin Finn <br>
+        <div class="AboutMeText">
+            <h3 style="text-align: center;">About Me</h3>
+            <p>Hey, ich bin Finn <br>
 
-            Windsurfen ist für mich mehr als nur ein Hobby, es ist das Gefühl von Freiheit, das einfach nie langweilig wird. Und genau dieses Gefühl möchte ich weitergeben. Wenn du also schon immer mal Windsurfen lernen wolltest oder nach professionellem Windsurf-Unterricht in Deutschland suchst, bist du hier genau richtig.<br><br>
-            
-            Ich bin dank meiner Eltern mit Windsurfen aufgewachsen. Trotzdem war es in Deutschland nicht immer leicht, genug Wind und Wellen zu finden. Also habe ich nach der Schule meinen Van gepackt und bin losgezogen: erst nach Athen, wo ich bei Tony Frey meine VDWS-Windsurf-Instructor-Lizenz gemacht habe, dann nach El Médano auf Teneriffa, um meine eigenen Skills zu verbessern.<br><br>
-            
-            In den letzten beiden Sommern war ich Teil des großartigen Force7-Teams auf Paros in Griechenland und dort wirst du mich auch im Sommer 2026 wieder finden.<br><br>
-            
-            Bis dahin bin ich in Deutschland und biete hier individuellen Windsurf-Unterricht für Einsteiger und Fortgeschrittene an.<br>
-            Das Besondere: Ich komme direkt zu deinem Spot, egal ob See oder Meer. So kannst du Windsurfen lernen, wo du dich am wohlsten fühlst, ganz ohne lange Anreise.<br><br>
-            
-            Wenn du Lust hast, den Wind im Segel zu spüren, deine Technik zu verbessern oder einfach Spaß auf dem Wasser zu haben,<br>
-            dann lass uns gemeinsam aufs Board steigen. 🌊
-        
-        </p></div>
-        <div id="AboutMeImg" class="AboutMeImg">
-            
-            
-        </div>     
-    </section>
+                Windsurfen ist für mich mehr als nur ein Hobby, es ist das Gefühl von Freiheit, das einfach nie
+                langweilig wird. Und genau dieses Gefühl möchte ich weitergeben. Wenn du also schon immer mal Windsurfen
+                lernen wolltest oder nach professionellem Windsurf-Unterricht in Deutschland suchst, bist du hier genau
+                richtig.<br><br>
 
-    <section class="sectionGallerie">
-        <div class="gallery">
-            <img src="assets/img/7C67C403-A063-4F1F-99E2-A62448906EFC_1_105_c.jpeg" alt="Gallery Image 1" class="wide">
-            <img src="assets/img/IMG_2149.JPG" alt="Gallery Image 2" class="wide">
-            <img src="assets/img/IMG_2332.JPG" alt="Gallery Image 3" class="wide">
-            <img src="assets/img/IMG_6519_Original.JPG" alt="Gallery Image 4" class="tall">
-            <img src="assets/img/IMG_1839.JPG" alt="Gallery Image 5"class="tall">
-            <img src="assets/img/IMG_1898.JPG" alt="Gallery Image 6" class="wide">
-            <img src="assets/img/IMG_2615.JPG" alt="Gallery Image 7"class="tall">
-            <img src="assets/img/IMG_2670.JPG" alt="Gallery Image 8"class="tall">
-            
+                Ich bin dank meiner Eltern mit Windsurfen aufgewachsen. Trotzdem war es in Deutschland nicht immer
+                leicht, genug Wind und Wellen zu finden. Also habe ich nach der Schule meinen Van gepackt und bin
+                losgezogen: erst nach Athen, wo ich bei Tony Frey meine VDWS-Windsurf-Instructor-Lizenz gemacht habe,
+                dann nach El Médano auf Teneriffa, um meine eigenen Skills zu verbessern.<br><br>
+
+                In den letzten beiden Sommern war ich Teil des großartigen Force7-Teams auf Paros in Griechenland und
+                dort wirst du mich auch im Sommer 2026 wieder finden.<br><br>
+
+                Bis dahin bin ich in Deutschland und biete hier individuellen Windsurf-Unterricht für Einsteiger und
+                Fortgeschrittene an.<br>
+                Das Besondere: Ich komme direkt zu deinem Spot, egal ob See oder Meer. So kannst du Windsurfen lernen,
+                wo du dich am wohlsten fühlst, ganz ohne lange Anreise.<br><br>
+
+                Wenn du Lust hast, den Wind im Segel zu spüren, deine Technik zu verbessern oder einfach Spaß auf dem
+                Wasser zu haben,<br>
+                dann lass uns gemeinsam aufs Board steigen. 🌊
+
+            </p>
         </div>
+        <div id="AboutMeImg" class="AboutMeImg">
 
 
+        </div>
     </section>
+
+    <section class="sectionGallery">
+        <div class="gallery" id="gallery">
+        </div>
+    </section>
+    <div class="greyOut d-none" id="greyOut" onclick="addDNone('greyOut')">
+       
+    </div>
+
 </body>
 
 </html>
