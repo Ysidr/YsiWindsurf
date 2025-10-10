@@ -44,13 +44,13 @@ const imageGroups = {
 };
 
 function init() {
-function init() {
+
     createImgList();
     renderAllImages();
 };
 
 function addDNone(id) {
-function addDNone(id) {
+
     document.getElementById(id).classList.add("d-none")
     document.getElementById("body").classList.remove("noScroll");
 
@@ -66,24 +66,19 @@ function createImgList() {
 
 function chooseImgs() {
     let x = Math.floor(Math.random() * imageGroups.imgList.length);
-    let x = Math.floor(Math.random() * imageGroups.imgList.length);
     renderImage(x);
 };
 
 function rotateImg(index) {
     if (index >= imageGroups.imgList.length) {
-    if (index >= imageGroups.imgList.length) {
         index = 0;
     } else if (index < 0) {
-        index = imageGroups.imgList.length - 1;
         index = imageGroups.imgList.length - 1;
     }
     renderImage(index);
 
 };
 
-function openImg(listName, imageIndex) {
-    const imageList = imageGroups[listName];
 function openImg(listName, imageIndex) {
     const imageList = imageGroups[listName];
     document.getElementById("greyOut").classList.toggle("d-none");
