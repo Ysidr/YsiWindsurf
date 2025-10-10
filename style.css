@@ -11,6 +11,10 @@ body {
     display: none;
 }
 
+.noScroll {
+    overflow-y: hidden;
+}
+
 .background {
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,6 +23,7 @@ body {
 }
 
 header {
+    position: relative;
     margin: 0;
     border: 0;
     background-image: url('assets/img/7C67C403-A063-4F1F-99E2-A62448906EFC_1_105_c.jpeg');
@@ -28,7 +33,27 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden; /* Ensure no overflow from the SVG */
+}
 
+
+.wave path {
+    stroke-dasharray: 10 10;
+    animation: drawWave 4s linear infinite;
+  }
+  
+  @keyframes drawWave {
+    to {
+      stroke-dashoffset: -20;
+    }
+  }
+
+header .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
 }
 
 h1 {
@@ -42,58 +67,109 @@ h2 {
 }
 
 .aboutMe {
-    text-align: left;
+    position: relative;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-    margin: 20px 20px 20px 20px;
+    margin: 20px;
     gap: 20px;
-
+    background-color: #ffffff; /* Ensure the wave blends into the section */
 }
 
 .AboutMeImg {
     flex: 1;
-    max-width: 720px !important;
+    max-width: 720px;
     overflow: hidden;
-    /* Ensures any overflowing part of the image is hidden */
     display: flex;
-    /* Ensures the image can be aligned properly */
     align-items: center;
-    /* Centers the image vertically */
     justify-content: center;
-    /* Centers the image horizontally */
+    max-height: 100%;
+}
+
+.AboutMeImg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.AboutMeRenderedImg {
+    position: relative; /* Set relative positioning for .AboutMeRenderedImg */
+    width: 100%; /* Ensure it takes the full width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AboutMeRenderedImg img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Crop the image if necessary to fit the container */
+}
+
+.buttonsandImgDiv {
+    display: flex;
+}
+
+.buttons {
+    position: absolute; /* Position the buttons relative to .AboutMeRenderedImg */
+    top: 0; /* Align to the top of .AboutMeRenderedImg */
+    left: 0; /* Align to the left of .AboutMeRenderedImg */
+    width: 100%; /* Match the width of .AboutMeRenderedImg */
+    height: 100%; /* Match the height of .AboutMeRenderedImg */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 48px; /* Set a fixed width for the buttons */
+    height: 48px; /* Set a fixed height for the buttons */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons button img {
+    width: 100%; /* Make the image fill the button */
+    height: auto; /* Maintain the aspect ratio */
+    filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(90%); /* Apply a light blue tint */
+    transition: filter 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+
+}
+
+.aboutMe button img:hover {
+    filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(130%); /* Make the image brighter on hover */
 }
 
 .AboutMeText {
     flex: 1;
     font-size: 18px;
     line-height: 2;
+    max-height: 100vh;
 }
-
-.AboutMeImg img {
-    width: 100%;
-    /* Makes the image fill the width of the container */
-    height: 100%;
-    /* Makes the image fill the height of the container */
-    object-fit: cover;
-    /* Crops the image to fit the container */
-    aspect-ratio: 2/3;
-}
-
 
 .sectionGallery {
     padding: 20px;
     background-color: #f9f9f9;
     /* Optional: Add a background color for contrast */
     box-sizing: border-box;
-
 }
 
 .gallery {
     width: 100%;
     row-gap: 15px;
-    padding: 15px;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in;
+
+}
+
+.height0 {
+    height: 0;
+}
+
+.heightMax {
+    height: auto;
 }
 
 .gallery img {
@@ -105,14 +181,12 @@ h2 {
     /* Optional: Add a hover effect */
 }
 
-
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 
     /* Slight zoom effect on hover */
 }
-
 
 .greyOut {
     position: fixed;
@@ -133,7 +207,38 @@ h2 {
 
 .innerGrayOut img {
     object-fit: cover;
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 80%;
+    max-height: 80%;
     border-radius: 16px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
 }
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+/*"\2796";Unicode character for "minus" sign (-) */

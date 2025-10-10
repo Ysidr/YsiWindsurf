@@ -1,14 +1,46 @@
-function renderImage(index){
-    document.getElementById("AboutMeImg").innerHTML = `<button onclick="rotateImg(${index-1})"><-</button>
-            <div class= "AboutMeRenderedImg"><img src="${imgList[index]}" alt="About Me Image" class="img-fluid rounded" style="max-width: 100%;"></div>
-            <button onclick="rotateImg(${index+1})">-></button>`;
+function renderImage(index) {
+    document.getElementById("AboutMeImg").innerHTML =
+        `    <div class="buttonsandImgDiv">
+        <div class="AboutMeRenderedImg">
+            <img src="${imageGroups.imgList[index]}" alt="About Me Image" class="img-fluid rounded" style="max-width: 100%;">
+            <div class="buttons">
+                <button class="buttonLeft" onclick="rotateImg(${index - 1})">
+                    <img src="./assets/icons/arrow-1293391_640.png" alt="Left Arrow">
+                </button>
+                <button class="buttonRight" onclick="rotateImg(${index + 1})">
+                    <img src="./assets/icons/arrow-1293392_640.png" alt="Right Arrow">
+                </button>
+            </div>
+        </div>
+    </div>`
+    
 };
 
-function renderAllImages(){
-    document.getElementById("gallery").innerHTML = ``;
-    let index=0;
-    allImgList.forEach(element => {
-        document.getElementById("gallery").innerHTML += `<img onclick="openImg(${index})" src="${element}" alt="Gallery Image">`
-        index++;
+function renderAllImages() {
+    document.getElementById("galleries").innerHTML = "";
+    // Clear all gallery containers first
+    document.querySelectorAll(".gallery").forEach(gallery => {
+        gallery.innerHTML = "";
+    });
+
+    // Dynamically render all groups
+    Object.keys(imageGroups).forEach(groupName => {
+        if (groupName != "imgList") {
+            document.getElementById("galleries").innerHTML += ` 
+        <section class="sectionGallery">
+            <button class="collapsible" onclick="openSection('${groupName}')">${groupName}</button>
+            <div class="gallery height0" id="${groupName}">
+            </div>
+        </section>`;
+        }
+
+        const container = document.getElementById(groupName);
+        if (!container) return;
+
+        imageGroups[groupName].forEach((img, index) => {
+            container.innerHTML += `
+                <img onclick="openImg('${groupName}', ${index})" src="${img}" alt="Gallery Image">
+            `;
+        });
     });
 }
