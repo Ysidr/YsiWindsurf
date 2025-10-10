@@ -36,7 +36,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow: hidden; /* Ensure no overflow from the SVG */
+    overflow: hidden;
+    /* Ensure no overflow from the SVG */
 }
 
 header img {
@@ -46,7 +47,7 @@ header img {
     height: 125px;
     width: 225px;
     transform: scalex(-1);
-    object-fit:fill;
+    object-fit: fill;
     z-index: 1;
 }
 
@@ -67,7 +68,8 @@ h2 {
     align-items: center;
     margin: 54px;
     gap: 25px;
-    background-color: #ffffff; /* Ensure the wave blends into the section */
+    background-color: #ffffff;
+    /* Ensure the wave blends into the section */
 }
 
 .AboutMeImg {
@@ -78,22 +80,29 @@ h2 {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    aspect-ratio: 0.8/1;
+    border-radius: 24px;
 }
 
 .AboutMeRenderedImg {
-    position: relative; /* Set relative positioning for .AboutMeRenderedImg */
-    width: 100%; /* Ensure it takes the full width of its container */
-    height: auto; /* Maintain the aspect ratio of the image */
+    position: relative;
+    /* Set relative positioning for .AboutMeRenderedImg */
+    width: 100%;
+    /* Ensure it takes the full width of its container */
+    height: auto;
+    /* Maintain the aspect ratio of the image */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .AboutMeRenderedImg img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: cover; /* Crop the image if necessary to fit the container */
-    border-radius: 24px;
+    width: 100%;
+    /* Make the image fill the container */
+    height: auto;
+    /* Maintain the aspect ratio */
+    object-fit: cover;
+    /* Crop the image if necessary to fit the container */
 }
 
 .buttonsandImgDiv {
@@ -101,11 +110,16 @@ h2 {
 }
 
 .buttons {
-    position: absolute; /* Position the buttons relative to .AboutMeRenderedImg */
-    top: 0; /* Align to the top of .AboutMeRenderedImg */
-    left: 0; /* Align to the left of .AboutMeRenderedImg */
-    width: 100%; /* Match the width of .AboutMeRenderedImg */
-    height: 100%; /* Match the height of .AboutMeRenderedImg */
+    position: absolute;
+    /* Position the buttons relative to .AboutMeRenderedImg */
+    top: 0;
+    /* Align to the top of .AboutMeRenderedImg */
+    left: 0;
+    /* Align to the left of .AboutMeRenderedImg */
+    width: 100%;
+    /* Match the width of .AboutMeRenderedImg */
+    height: 100%;
+    /* Match the height of .AboutMeRenderedImg */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -113,22 +127,29 @@ h2 {
 }
 
 .buttons button {
-    width: 48px; /* Set a fixed width for the buttons */
+    width: 48px;
+    /* Set a fixed width for the buttons */
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
 .buttons button img {
-    width: 100%; /* Make the image fill the button */
-    filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(90%); /* Apply a light blue tint */
-    opacity: 0.35; /* Slight transparency */
-    transition: filter 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+    width: 100%;
+    /* Make the image fill the button */
+    filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(90%);
+    /* Apply a light blue tint */
+    opacity: 0.35;
+    /* Slight transparency */
+    transition: filter 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    /* Smooth transition for hover effects */
 }
 
 .aboutMe button img:hover {
-    filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(130%); /* Make the image brighter on hover */
-    opacity: 0.75; /* Slight transparency */
+    filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(130%);
+    /* Make the image brighter on hover */
+    opacity: 0.75;
+    /* Slight transparency */
 
 }
 
