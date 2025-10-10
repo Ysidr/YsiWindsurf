@@ -1,30 +1,38 @@
-@media (max-width: 1000px) {
+@media (max-width: 1001px) {
 
     .AboutMeText {
         flex: 1;
         font-size: 18px;
         line-height: 2;
         height: 700px;
-        overflow-y: scroll;
+        flex: 2;
     }
 
 }
 
-@media (max-width: 500px) {
-
-    .AboutMeImg img {
-        width: 100%;
-        /* Makes the image fill the width of the container */
-        height: 100%;
-        /* Makes the image fill the height of the container */
-        object-fit: cover;
-        /* Crops the image to fit the container */
-        aspect-ratio: 1/1;
-    }
+@media (max-width: 850px) {
 
     .AboutMeText {
         flex: 1;
         font-size: 17px;
         line-height: 1,6;
+    }
+    .aboutMe {
+        flex-direction: column;
+    }
+    .services img {
+        width: 160px;
+    }
+    .sectionServices {
+        padding: 10px;
+        margin: 24px;
+    }
+    .gallery img {
+        height: 100px;
+        border-radius: 15px;
+        padding: 10px;
+        /* Optional: Add a subtle shadow */
+        transition: transform 0.3s ease;
+        /* Optional: Add a hover effect */
     }
 }

@@ -27,7 +27,6 @@ body {
 
 header {
     position: relative;
-    position: relative;
     margin: 0;
     border: 0;
     background-image: url('assets/img/7C67C403-A063-4F1F-99E2-A62448906EFC_1_105_c.jpeg');
@@ -63,21 +62,16 @@ h2 {
 
 .aboutMe {
     position: relative;
-    position: relative;
     display: flex;
     justify-content: space-between;
-    justify-content: space-between;
     align-items: center;
-    margin: 20px;
-    margin: 20px;
-    gap: 20px;
-    background-color: #ffffff; /* Ensure the wave blends into the section */
+    margin: 54px;
+    gap: 25px;
     background-color: #ffffff; /* Ensure the wave blends into the section */
 }
 
 .AboutMeImg {
     flex: 1;
-    max-width: 720px;
     max-width: 720px;
     overflow: hidden;
     display: flex;
@@ -180,7 +174,7 @@ h2 {
 
 .gallery img {
     height: 300px;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 10px;
     /* Optional: Add a subtle shadow */
     transition: transform 0.3s ease;
@@ -262,6 +256,7 @@ h2 {
     justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
+    gap: 24px;
 }
 
 .service2 {
