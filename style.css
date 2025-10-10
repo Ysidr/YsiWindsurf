@@ -3,12 +3,15 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    width: 100%;
     scrollbar-width: 0;
 }
 
 .d-none {
     display: none;
+}
+
+.noScroll {
+    overflow-y: hidden;
 }
 
 .noScroll {
@@ -24,6 +27,7 @@ body {
 
 header {
     position: relative;
+    position: relative;
     margin: 0;
     border: 0;
     background-image: url('assets/img/7C67C403-A063-4F1F-99E2-A62448906EFC_1_105_c.jpeg');
@@ -36,24 +40,15 @@ header {
     overflow: hidden; /* Ensure no overflow from the SVG */
 }
 
-
-.wave path {
-    stroke-dasharray: 10 10;
-    animation: drawWave 4s linear infinite;
-  }
-  
-  @keyframes drawWave {
-    to {
-      stroke-dashoffset: -20;
-    }
-  }
-
-header .wave {
+header img {
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
-    width: 100%;
-    height: auto;
+    height: 125px;
+    width: 225px;
+    transform: scalex(-1);
+    object-fit:fill;
+    z-index: 1;
 }
 
 h1 {
@@ -68,28 +63,27 @@ h2 {
 
 .aboutMe {
     position: relative;
+    position: relative;
     display: flex;
+    justify-content: space-between;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+    margin: 20px;
     gap: 20px;
+    background-color: #ffffff; /* Ensure the wave blends into the section */
     background-color: #ffffff; /* Ensure the wave blends into the section */
 }
 
 .AboutMeImg {
     flex: 1;
     max-width: 720px;
+    max-width: 720px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 100%;
-}
-
-.AboutMeImg img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    box-sizing: border-box;
 }
 
 .AboutMeRenderedImg {
@@ -105,6 +99,7 @@ h2 {
     width: 100%; /* Make the image fill the container */
     height: auto; /* Maintain the aspect ratio */
     object-fit: cover; /* Crop the image if necessary to fit the container */
+    border-radius: 24px;
 }
 
 .buttonsandImgDiv {
@@ -120,11 +115,11 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .buttons button {
     width: 48px; /* Set a fixed width for the buttons */
-    height: 48px; /* Set a fixed height for the buttons */
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -132,21 +127,21 @@ h2 {
 
 .buttons button img {
     width: 100%; /* Make the image fill the button */
-    height: auto; /* Maintain the aspect ratio */
     filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(90%); /* Apply a light blue tint */
-    transition: filter 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-
+    opacity: 0.35; /* Slight transparency */
+    transition: filter 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .aboutMe button img:hover {
     filter: sepia(100%) saturate(200%) hue-rotate(190deg) brightness(130%); /* Make the image brighter on hover */
+    opacity: 0.75; /* Slight transparency */
+
 }
 
 .AboutMeText {
     flex: 1;
     font-size: 18px;
     line-height: 2;
-    max-height: 100vh;
 }
 
 .sectionGallery {
@@ -159,6 +154,17 @@ h2 {
 .gallery {
     width: 100%;
     row-gap: 15px;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in;
+
+}
+
+.height0 {
+    height: 0;
+}
+
+.heightMax {
+    height: auto;
     overflow: hidden;
     transition: max-height 0.25s ease-in;
 
@@ -225,6 +231,7 @@ h2 {
     text-align: left;
     outline: none;
     font-size: 15px;
+    border-radius: 16px;
 }
 
 .active,
@@ -239,6 +246,45 @@ h2 {
     color: white;
     float: right;
     margin-left: 5px;
+}
+
+.sectionServices {
+    margin: 64px;
+    background-color: #f9f9f9;
+    padding: 24px 54px 24px 54px;
+    border-radius: 10px;
+
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.service2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.services img {
+    width: 360px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.allServices {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pacets {
+    width: 720px;
 }
 
 /*"\2796";Unicode character for "minus" sign (-) */

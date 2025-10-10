@@ -1,80 +1,59 @@
 const imageGroups = {
     imgList: [
-        "assets/img/IMG_2149.JPG",
-        "assets/img/IMG_7036.JPG",
-        "assets/img/IMG_6519_Original.JPG",
-        "assets/img/IMG_2332.JPG",
-        "assets/img/IMG_7038.JPG"
+        "assets/img/aboutMe/IMG_2149.JPG",
+        "assets/img/aboutMe/IMG_2332.JPG",
+        "assets/img/aboutMe/IMG_2670.JPG",
+        "assets/img/aboutMe/IMG_6519_Original_2.JPG",
+        "assets/img/aboutMe/IMG_7036_2.JPG",
+        "assets/img/aboutMe/IMG_7038_2.JPG"
     ],
     "Ich als Windsurf Lehrer": [
-        "assets/img/IMG_1839.JPG",
-        "assets/img/IMG_4970.JPG",
-        "assets/img/IMG_4971.JPG",
-        "assets/img/IMG_4972.JPG",
-        "assets/img/IMG_4973.JPG",
-        "assets/img/IMG_4974.JPG",
-        "assets/img/IMG_4975.JPG",
-        "assets/img/IMG_4976.JPG",
-        "assets/img/IMG_4977.JPG",
-        "assets/img/IMG_4978.JPG",
-        "assets/img/IMG_7036.JPG",
-        "assets/img/IMG_7037.JPG",
-        "assets/img/IMG_7038.JPG",
-        "assets/img/IMG_7039.JPG",
-        "assets/img/IMG_7040.JPG",
-        "assets/img/IMG_7041.JPG",
-        "assets/img/IMG_7042.JPG",
-        "assets/img/IMG_7043.JPG",
-        "assets/img/IMG_7044.JPG",
-        "assets/img/IMG_7045.JPG",
-        "assets/img/IMG_7045.JPG"
+        "assets/img/instructor/IMG_1839.JPG",
+        "assets/img/instructor/IMG_4971.JPG",
+        "assets/img/instructor/IMG_4972.JPG",
+        "assets/img/instructor/IMG_4973.JPG",
+        "assets/img/instructor/IMG_4974.JPG",
+        "assets/img/instructor/IMG_4975.JPG",
+        "assets/img/instructor/IMG_4976.JPG",
+        "assets/img/instructor/IMG_4977.JPG",
+        "assets/img/instructor/IMG_4978.JPG",
+        "assets/img/instructor/IMG_7036.JPG",
+        "assets/img/instructor/IMG_7037.JPG",
+        "assets/img/instructor/IMG_7038.JPG",
+        "assets/img/instructor/IMG_7039.JPG",
+        "assets/img/instructor/IMG_7040.JPG",
+        "assets/img/instructor/IMG_7041.JPG",
+        "assets/img/instructor/IMG_7042.JPG",
+        "assets/img/instructor/IMG_7043.JPG",
+        "assets/img/instructor/IMG_7044.JPG",
+        "assets/img/instructor/IMG_7045.JPG",
+        "assets/img/instructor/IMG_7046.JPG",
+        "assets/img/instructor/IMG_4970.JPG"
     ],
     "Einfach nur Ich": [
-        "assets/img/IMG_1898.JPG",
-        "assets/img/IMG_2149.JPG",
-        "assets/img/IMG_2332.JPG",
-        "assets/img/IMG_2615.JPG",
-        "assets/img/IMG_2670.JPG",
-        "assets/img/IMG_6519_Original.JPG"
+        "assets/img/me/IMG_1898.JPG",
+        "assets/img/me/IMG_2149_2.JPG",
+        "assets/img/me/IMG_2332_2.JPG",
+        "assets/img/me/IMG_2615.JPG",
+        "assets/img/me/IMG_2670_2.JPG",
+        "assets/img/me/IMG_6519_Original.JPG"
     ],
     "Alle Bilder": [
-        "assets/img/IMG_6519_Original.JPG",
-        "assets/img/IMG_1839.JPG",
-        "assets/img/IMG_1898.JPG",
-        "assets/img/IMG_2149.JPG",
-        "assets/img/IMG_2332.JPG",
-        "assets/img/IMG_2615.JPG",
-        "assets/img/IMG_2670.JPG",
-        "assets/img/IMG_4970.JPG",
-        "assets/img/IMG_4971.JPG",
-        "assets/img/IMG_4972.JPG",
-        "assets/img/IMG_4973.JPG",
-        "assets/img/IMG_4974.JPG",
-        "assets/img/IMG_4975.JPG",
-        "assets/img/IMG_4976.JPG",
-        "assets/img/IMG_4977.JPG",
-        "assets/img/IMG_4978.JPG",
-        "assets/img/IMG_7036.JPG",
-        "assets/img/IMG_7037.JPG",
-        "assets/img/IMG_7038.JPG",
-        "assets/img/IMG_7039.JPG",
-        "assets/img/IMG_7040.JPG",
-        "assets/img/IMG_7041.JPG",
-        "assets/img/IMG_7042.JPG",
-        "assets/img/IMG_7043.JPG",
-        "assets/img/IMG_7044.JPG",
-        "assets/img/IMG_7045.JPG",
-        "assets/img/IMG_7045.JPG"
+
     ]
 };
 
+function init() {
 function init() {
     createImgList();
     renderAllImages();
 };
 
 function addDNone(id) {
+function addDNone(id) {
     document.getElementById(id).classList.add("d-none")
+    document.getElementById("body").classList.remove("noScroll");
+
     document.getElementById("body").classList.remove("noScroll");
 
 };
@@ -87,19 +66,24 @@ function createImgList() {
 
 function chooseImgs() {
     let x = Math.floor(Math.random() * imageGroups.imgList.length);
+    let x = Math.floor(Math.random() * imageGroups.imgList.length);
     renderImage(x);
 };
 
 function rotateImg(index) {
     if (index >= imageGroups.imgList.length) {
+    if (index >= imageGroups.imgList.length) {
         index = 0;
     } else if (index < 0) {
+        index = imageGroups.imgList.length - 1;
         index = imageGroups.imgList.length - 1;
     }
     renderImage(index);
 
 };
 
+function openImg(listName, imageIndex) {
+    const imageList = imageGroups[listName];
 function openImg(listName, imageIndex) {
     const imageList = imageGroups[listName];
     document.getElementById("greyOut").classList.toggle("d-none");
@@ -140,3 +124,4 @@ function renderAllImages() {
         });
     });
 }
+
