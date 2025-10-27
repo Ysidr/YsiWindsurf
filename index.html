@@ -5,102 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YsiWindsurfing</title>
-    <script src="./script.js"></script>
-    <script src="./scripts/templates.js"></script>
+    <script src="./script.js" defer></script>
+    <script src="./scripts/templates.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/media.css">
 </head>
 
 <body onload="init()" id="body">
+    <header class="background">
+        <h1>Ysi Windsurf insturctor</h1>
+        <h2>Your Windsurf instructor in Greece and Germany</h2>
+        <img src="./assets/icons/WaveTransition.png" alt="" />
+    </header>
+    <section class="menues">
+        <div class="menu1">About Me</div>
+        <div class="menu1">Services</div>
+        <div class="menu1">Gallery</div>
+    </section>
 
-    <body onload="init()" id="body">
-        <header class="background">
-            <h1>Ysi Windsurf insturctor</h1>
-            <h2>Your Windsurf instructor in Greece and Germany</h2>
+    <section class="aboutMe">
+        <div class="AboutMeText">
+            <h3 style="text-align: center;">Windsurfen lernen flexibel, persönlich & mit Spaß</h3>
+            <p>
+                Hey, ich bin Finn, <br>
+                Windsurfer aus Leidenschaft. Für mich ist Windsurfen mehr als nur ein Sport: Es
+                ist Freiheit, Adrenalin und echtes Lebensgefühl. Und genau das möchte ich mit dir teilen!
 
-            <img src="./assets/icons/WaveTransition.png" alt="">
-        </header>
+                Mit dem Board bin ich aufgewachsen, meine Instructor-Lizenz habe ich bei Tony Frey in Athen gemacht,
+                danach zog es mich nach Teneriffa und Paros. Seitdem gebe ich Windsurf-Unterricht für Anfänger und
+                Fortgeschrittene. <br> individuell, professionell und mit richtig viel Spaß.
 
+                Dein Vorteil: Ich komme zu deinem Spot, egal ob See oder Meer. Kein Schulbetrieb, keine
+                Massenkurse, sondern persönliches Coaching genau da, wo du surfen willst.
 
-        <section class="aboutMe">
-            <div class="AboutMeText">
-                <h3 style="text-align: center;">                    Windsurfen lernen flexibel, persönlich & mit Spaß
-                </h3>
-                <p>Hey, ich bin Finn, <br>
+                Ob du Windsurfen lernen willst oder deine Technik verbessern möchtest, ich helfe dir aufs nächste
+                Level.
 
-                    Windsurfer aus Leidenschaft. Für mich ist Windsurfen mehr als nur ein Sport: Es
-                    ist Freiheit, Adrenalin und echtes Lebensgefühl. Und genau das möchte ich mit dir teilen!
-
-                    Mit dem Board bin ich aufgewachsen, meine Instructor-Lizenz habe ich bei Tony Frey in Athen gemacht,
-                    danach zog es mich nach Teneriffa und Paros. Seitdem gebe ich Windsurf-Unterricht für Anfänger und
-                    Fortgeschrittene. <br> individuell, professionell und mit richtig viel Spaß.
-
-                    Dein Vorteil: Ich komme zu deinem Spot, egal ob See oder Meer. Kein Schulbetrieb, keine
-                    Massenkurse, sondern persönliches Coaching genau da, wo du surfen willst.
-
-                    Ob du Windsurfen lernen willst oder deine Technik verbessern möchtest, ich helfe dir aufs nächste
-                    Level.
-
-                    Let's ride!
-
-                </p>
-            </div>
-            <div id="AboutMeImg" class="AboutMeImg">
-
-
-            </div>
-        </section>
-
-        <section class="sectionServices">
-            <h2>Das könnt ihr bei mir machen</h2>
-            <div class="allServices">
-                <div class=" services service1">
-                    <div class="pacets pacet1">
-                        <h3>Beginner Paket</h3>
-                        <p>für deine Allerersten schritte auf dem Surfboard. Keine Vorerfahrung nötig</p>
-                    </div>
-                    <div class="serviceImg"><img src="assets/img/instructor/IMG_7042.JPG" alt=""></div>
-                </div>
-                <div class=" services service2">
-                    <div class="pacets pacet2">
-                        <h3>Vortgeschrittenen Paket</h3>
-                        <p>Vorraussetzung: Beherrschen der schnellen Halse, der Wende, des höhe laufens und des
-                            abfallens
-                        </p>
-                    </div>
-                    <div class="serviceImg"><img src="assets/img/instructor/IMG_7039.JPG" alt=""></div>
-                </div>
-                <div class=" services service3">
-                    <div class="pacets pacet3">
-                        <h3>Progression Paket</h3>
-                        <p>ich hole dich da ab, wo du grade bist, und ab da machen wir dich zum exelenten Windsurfer</p>
-                    </div>
-                    <div class="serviceImg"><img src="assets/img/instructor/IMG_1839.JPG" alt=""></div>
-                </div>
-                <button>Welches Paket is richtig für dich?</button>
-            </div>
-        </section>
-        <section>
-            <h2>Meine Gallerie</h2>
-            <div class="galleries" id="galleries">
-
-            </div>
-
-
-        </section>
-        <div class="greyOut d-none" id="greyOut" onclick="addDNone('greyOut')">
-
-
+                Let's ride!
+            </p>
         </div>
+        <div id="AboutMeImg" class="AboutMeImg"></div>
+    </section>
 
+    <section class="sectionServices">
+        <h2>Das könnt ihr bei mir machen</h2>
+        <div class="allServices">
+            <div class="services service1">
+                <div class="pacets pacet1">
+                    <h3>Beginner Paket</h3>
+                    <p>für deine Allerersten schritte auf dem Surfboard. Keine Vorerfahrung nötig</p>
+                </div>
+                <div class="serviceImg">
+                    <img src="assets/img/instructor/IMG_7042.JPG" alt="" />
+                </div>
+            </div>
+            <div class="services service2">
+                <div class="pacets pacet2">
+                    <h3>Vortgeschrittenen Paket</h3>
+                    <p>Vorraussetzung: Beherrschen der schnellen Halse, der Wende, des höhe laufens und des abfallens
+                    </p>
+                </div>
+                <div class="serviceImg">
+                    <img src="assets/img/instructor/IMG_7039.JPG" alt="" />
+                </div>
+            </div>
+            <div class="services service3">
+                <div class="pacets pacet3">
+                    <h3>Progression Paket</h3>
+                    <p>ich hole dich da ab, wo du grade bist, und ab da machen wir dich zum exzellenten Windsurfer</p>
+                </div>
+                <div class="serviceImg">
+                    <img src="assets/img/instructor/IMG_1839.JPG" alt="" />
+                </div>
+            </div>
+            <button>Welches Paket is richtig für dich?</button>
+        </div>
+    </section>
 
+    <section>
+        <h2>Meine Gallerie</h2>
+        <div class="galleries" id="galleries"></div>
+    </section>
 
-
-
-
-
-    </body>
-
-
+    <div class="greyOut d-none" id="greyOut" onclick="addDNone('greyOut')"></div>
+</body>
 
 </html>

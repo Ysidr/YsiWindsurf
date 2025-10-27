@@ -6,10 +6,10 @@ function renderImage(index) {
                 
                 <div class="buttons">
                     <button class="buttonLeft" onclick="rotateImg(${index - 1})">
-                        <img src="./assets/icons/arrow-1293391_640.png" alt="">
+                        <img src="./assets/icons/arrow-1293391_640.png" alt="" />
                     </button>
                     <button class="buttonRight" onclick="rotateImg(${index + 1})">
-                        <img src="./assets/icons/arrow-1293392_640.png" alt="">
+                        <img src="./assets/icons/arrow-1293392_640.png" alt="" />
                     </button>
                 </div>
             </div>
